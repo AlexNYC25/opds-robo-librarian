@@ -1,5 +1,5 @@
 name: opds_robo_librarian
-description: A starting point for Dart libraries or applications.
+description: An OPDS client for Dart.
 version: 1.0.0
 repository: https://github.com/AlexNYC25/opds-robo-librarian
 
