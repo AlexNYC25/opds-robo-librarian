@@ -37,16 +37,17 @@ keeping track of books currently being read, are retrieved an made available
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
 ```dart
-const like = 'sample';
+final LibraryLibrarian librarian =
+LibraryLibrarian(testUser, testPassword, opdsUrl, isKomga: false);
+
+await librarian.libraryCard.validateServer();
+
+final Map<String, dynamic> keepReadingData =
+await librarian.libraryCard.getKeepReading();
 ```
 
 <!--

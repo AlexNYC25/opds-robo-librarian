@@ -1,6 +1,6 @@
 name: opds_robo_librarian
 description: An OPDS client for Dart.
-version: 1.0.0
+version: 0.1.0
 repository: https://github.com/AlexNYC25/opds-robo-librarian
 
 environment:
