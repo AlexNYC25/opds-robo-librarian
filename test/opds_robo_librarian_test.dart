@@ -233,7 +233,12 @@ void main() {
         final LibraryLibrarian librarian =
             LibraryLibrarian(testUser, testPassword, opdsUrl, isKomga: false);
 
-        await librarian.libraryCard.validateServer();
+        bool check = await librarian.validateServer();
+
+        if (!check) {
+          print('Server not set up');
+          return;
+        }
 
         final Map<String, dynamic> keepReadingData =
             await librarian.libraryCard.getKeepReading();
