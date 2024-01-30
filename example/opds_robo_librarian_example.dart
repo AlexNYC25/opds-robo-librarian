@@ -7,9 +7,9 @@ void main() async {
 
   final LibraryLibrarian librarian = LibraryLibrarian(username, password, url);
 
-  await librarian.libraryCard.validateServer();
+  bool credentialsWorking = await librarian.validateServer();
 
-  if (librarian.libraryCard.isSetUp == true) {
+  if (credentialsWorking == true) {
     print('Server is setup correctly');
   } else {
     // replace with your own error handling
