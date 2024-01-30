@@ -1,6 +1,6 @@
 name: opds_robo_librarian
 description: An OPDS client for Dart, written in Dart to connect and request data from OPDS feeds and other sources such as Komga
-version: 0.1.0
+version: 0.1.1
 repository: https://github.com/AlexNYC25/opds-robo-librarian
 license: MIT
 
