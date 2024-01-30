@@ -181,13 +181,15 @@ class LibraryCardKomga extends LibraryCard {
     return response;
   }
 
+  /// Handles the request for the currently reading books, returning a [Future]
+  /// object of type [Map<String, dynamic>]
   @override
   Future<Map<String, dynamic>> getKeepReading({int? page}) async {
     return handleRequestForData(getCurrentlyReadingResponse, page: page);
   }
 
   // ***************************************************************
-  // Next On Deck
+  // On Deck
   // ***************************************************************
 
   /// Creates a request to the /books/ondeck endpoint of the Komga server,
@@ -204,6 +206,8 @@ class LibraryCardKomga extends LibraryCard {
     return response;
   }
 
+  /// Handles the request for the next on deck books, returning a [Future]
+  /// object of type [Map<String, dynamic>]
   @override
   Future<Map<String, dynamic>> getNextReadyToRead({int? page}) async {
     return handleRequestForData(getNextOnDeckResponse, page: page);
@@ -231,6 +235,8 @@ class LibraryCardKomga extends LibraryCard {
     return response;
   }
 
+  /// Handles the request for the latest series, returning a [Future] object of
+  /// type [Map<String, dynamic>]
   @override
   Future<Map<String, dynamic>> getLatestSeries({int? page}) async {
     return handleRequestForData(getLatestSeriesResponse, page: page);
@@ -258,6 +264,8 @@ class LibraryCardKomga extends LibraryCard {
     return response;
   }
 
+  /// Handles the request for the latest books, returning a [Future] object of
+  /// type [Map<String, dynamic>]
   @override
   Future<Map<String, dynamic>> getLatestBooks({int? page}) async {
     return handleRequestForData(getLatestBooksResponse, page: page);
@@ -285,6 +293,8 @@ class LibraryCardKomga extends LibraryCard {
     return response;
   }
 
+  /// Handles the request for the recently updated series, returning a [Future]
+  /// object of type [Map<String, dynamic>]
   @override
   Future<Map<String, dynamic>> getRecentlyUpdatedSeries({int? page}) async {
     return handleRequestForData(getRecentlyUpdatedSeriesResponse, page: page);
@@ -316,6 +326,8 @@ class LibraryCardKomga extends LibraryCard {
     return response;
   }
 
+  /// Handles the request for the recently read books, returning a [Future]
+  /// object of type [Map<String, dynamic>]
   @override
   Future<Map<String, dynamic>> getRecentlyReadBooks({int? page}) async {
     return handleRequestForData(getRecentlyReadBooksResponse, page: page);
@@ -340,6 +352,8 @@ class LibraryCardKomga extends LibraryCard {
     return response;
   }
 
+  /// Handles the request for the libraries, returning a [Future] object of type
+  /// [Map<String, dynamic>]
   @override
   Future<Map<String, dynamic>> getLibraries({int? page}) async {
     return handleRequestForData(getLibrariesResponse, page: page);
@@ -364,6 +378,8 @@ class LibraryCardKomga extends LibraryCard {
     return response;
   }
 
+  /// Handles the request for the collections, returning a [Future] object of
+  /// type [Map<String, dynamic>]
   @override
   Future<Map<String, dynamic>> getCollections({int? page}) async {
     return handleRequestForData(getCollectionsResponse, page: page);
@@ -388,6 +404,8 @@ class LibraryCardKomga extends LibraryCard {
     return response;
   }
 
+  /// Handles the request for the read lists, returning a [Future] object of
+  /// type [Map<String, dynamic>]
   @override
   Future<Map<String, dynamic>> getReadLists({int? page}) async {
     return handleRequestForData(getReadListsResponse, page: page);
@@ -412,6 +430,8 @@ class LibraryCardKomga extends LibraryCard {
     return response;
   }
 
+  /// Handles the request for the publishers, returning a [Future] object of
+  /// type [Map<String, dynamic>]
   @override
   Future<Map<String, dynamic>> getPublishers({int? page}) async {
     return handleRequestForData(getPublishersResults, page: page);
@@ -437,6 +457,8 @@ class LibraryCardKomga extends LibraryCard {
     return response;
   }
 
+  /// Handles the request for the search results, returning a [Future] object of
+  /// type [Map<String, dynamic>]
   @override
   Future<Map<String, dynamic>> getSearchResults(String query,
       {int? page}) async {
@@ -464,6 +486,8 @@ class LibraryCardKomga extends LibraryCard {
     return response;
   }
 
+  /// Handles the request for the search results by series, returning a [Future]
+  /// object of type [Map<String, dynamic>]
   @override
   Future<Map<String, dynamic>> getSearchResultsBySeries(String query,
       {int? page}) async {

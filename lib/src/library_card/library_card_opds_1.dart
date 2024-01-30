@@ -472,6 +472,8 @@ class LibraryCardOpds1 extends LibraryCard {
     return response;
   }
 
+  /// Handles the request for the currently reading books, returning a [Future]
+  /// object of type [Map<String, dynamic>]
   @override
   Future<Map<String, dynamic>> getKeepReading({int? page}) async {
     return handleRequestForData(
@@ -528,6 +530,8 @@ class LibraryCardOpds1 extends LibraryCard {
     return response;
   }
 
+  /// Handles the request for the next on deck books, returning a [Future]
+  /// object of type [Map<String, dynamic>]
   @override
   Future<Map<String, dynamic>> getNextReadyToRead({int? page}) async {
     return handleRequestForData(
@@ -563,6 +567,11 @@ class LibraryCardOpds1 extends LibraryCard {
     return false;
   }
 
+  /// Creates a request to to the 'latestSeries' url assuming it exists, returning
+  /// a [Future] object of type [http.Response]
+  ///
+  /// Optionally a [page] number can be passed to get a specific page of results,
+  /// otherwise by default it gets the first page of results.
   Future<http.Response> getLatestSeriesResponse({int page = 0}) async {
     Map<String, dynamic> latestSeriesResult = opdsManifest['data']
             ['functionalEntries']
@@ -579,6 +588,8 @@ class LibraryCardOpds1 extends LibraryCard {
     return response;
   }
 
+  /// Handles the request for the latest series, returning a [Future]
+  /// object of type [Map<String, dynamic>]
   @override
   Future<Map<String, dynamic>> getLatestSeries({int? page}) async {
     return handleRequestForData(
@@ -614,6 +625,11 @@ class LibraryCardOpds1 extends LibraryCard {
     return false;
   }
 
+  /// Creates a request to to the 'latestBooks' url assuming it exists, returning
+  /// a [Future] object of type [http.Response]
+  ///
+  /// Optionally a [page] number can be passed to get a specific page of results,
+  /// otherwise by default it gets the first page of results.
   Future<http.Response> getLatestBooksResponse({int page = 0}) async {
     Map<String, dynamic> latestBooksResult = opdsManifest['data']
             ['functionalEntries']
@@ -630,6 +646,8 @@ class LibraryCardOpds1 extends LibraryCard {
     return response;
   }
 
+  /// Handles the request for the latest books, returning a [Future]
+  /// object of type [Map<String, dynamic>]
   @override
   Future<Map<String, dynamic>> getLatestBooks({int? page}) async {
     return handleRequestForData(
@@ -665,6 +683,11 @@ class LibraryCardOpds1 extends LibraryCard {
     return false;
   }
 
+  /// Creates a request to to the 'allSeries' url assuming it exists, returning
+  /// a [Future] object of type [http.Response]
+  ///
+  /// Optionally a [page] number can be passed to get a specific page of results,
+  /// otherwise by default it gets the first page of results.
   Future<http.Response> getRecentlyUpdatedSeriesResponse({int page = 0}) async {
     Map<String, dynamic> recentlyUpdatedSeriesResult = opdsManifest['data']
             ['functionalEntries']
@@ -681,6 +704,8 @@ class LibraryCardOpds1 extends LibraryCard {
     return response;
   }
 
+  /// Handles the request for the recently updated series, returning a [Future]
+  /// object of type [Map<String, dynamic>]
   @override
   Future<Map<String, dynamic>> getRecentlyUpdatedSeries({int? page}) async {
     return handleRequestForData(
@@ -716,6 +741,11 @@ class LibraryCardOpds1 extends LibraryCard {
     return false;
   }
 
+  /// Creates a request to to the 'allLibraries' url assuming it exists, returning
+  /// a [Future] object of type [http.Response]
+  ///
+  /// Optionally a [page] number can be passed to get a specific page of results,
+  /// otherwise by default it gets the first page of results.
   Future<http.Response> getLibrariesResponse({int page = 0}) async {
     Map<String, dynamic> librariesResult = opdsManifest['data']
             ['functionalEntries']
@@ -732,6 +762,8 @@ class LibraryCardOpds1 extends LibraryCard {
     return response;
   }
 
+  /// Handles the request for the libraries, returning a [Future] object of type
+  /// [Map<String, dynamic>]
   @override
   Future<Map<String, dynamic>> getLibraries({int? page}) async {
     return handleRequestForData(
@@ -767,6 +799,11 @@ class LibraryCardOpds1 extends LibraryCard {
     return false;
   }
 
+  /// Creates a request to to the 'allCollections' url assuming it exists, returning
+  /// a [Future] object of type [http.Response]
+  ///
+  /// Optionally a [page] number can be passed to get a specific page of results,
+  /// otherwise by default it gets the first page of results.
   Future<http.Response> getCollectionsResponse({int page = 0}) async {
     Map<String, dynamic> collectionsResult = opdsManifest['data']
             ['functionalEntries']
@@ -783,6 +820,8 @@ class LibraryCardOpds1 extends LibraryCard {
     return response;
   }
 
+  /// Handles the request for the collections, returning a [Future] object of type
+  /// [Map<String, dynamic>]
   @override
   Future<Map<String, dynamic>> getCollections({int? page}) async {
     return handleRequestForData(
@@ -818,6 +857,11 @@ class LibraryCardOpds1 extends LibraryCard {
     return false;
   }
 
+  /// Creates a request to to the 'allReadLists' url assuming it exists, returning
+  /// a [Future] object of type [http.Response]
+  ///
+  /// Optionally a [page] number can be passed to get a specific page of results,
+  /// otherwise by default it gets the first page of results.
   Future<http.Response> getReadListsResponse({int page = 0}) async {
     Map<String, dynamic> readListsResult = opdsManifest['data']
             ['functionalEntries']
@@ -834,6 +878,8 @@ class LibraryCardOpds1 extends LibraryCard {
     return response;
   }
 
+  /// Handles the request for the read lists, returning a [Future] object of type
+  /// [Map<String, dynamic>]
   @override
   Future<Map<String, dynamic>> getReadLists({int? page}) async {
     return handleRequestForData(
@@ -869,6 +915,8 @@ class LibraryCardOpds1 extends LibraryCard {
     return false;
   }
 
+  /// Creates a request to to the 'allPublishers' url assuming it exists, returning
+  /// a [Future] object of type [http.Response]
   Future<http.Response> getPublishersResponse({int page = 0}) async {
     Map<String, dynamic> publishersResult = opdsManifest['data']
             ['functionalEntries']
@@ -885,6 +933,8 @@ class LibraryCardOpds1 extends LibraryCard {
     return response;
   }
 
+  /// Handles the request for the publishers, returning a [Future] object of type
+  /// [Map<String, dynamic>]
   @override
   Future<Map<String, dynamic>> getPublishers({int? page}) async {
     return handleRequestForData(
@@ -898,6 +948,11 @@ class LibraryCardOpds1 extends LibraryCard {
   // Search Books
   // ***************************************************************
 
+  /// Creates a request to to the 'latestBooks' url assuming it exists, returning
+  /// a [Future] object of type [http.Response]
+  ///
+  /// Optionally a [page] number can be passed to get a specific page of results,
+  /// otherwise by default it gets the first page of results.
   Future<http.Response> getLatestBooksResponseSearch({int page = 0}) async {
     Map<String, dynamic> latestBooksResult = opdsManifest['data']
             ['functionalEntries']
@@ -914,6 +969,8 @@ class LibraryCardOpds1 extends LibraryCard {
     return response;
   }
 
+  /// Handles the request for the latest books, returning a [Future]
+  /// object of type [Map<String, dynamic>]
   @override
   Future<Map<String, dynamic>> getSearchResults(String query,
       {int? page}) async {
@@ -947,6 +1004,8 @@ class LibraryCardOpds1 extends LibraryCard {
     return false;
   }
 
+  /// Creates a request to to the 'search' url assuming it exists, returning
+  /// a [Future] object of type [http.Response]
   Future<http.Response> getSearchResultsBySeriesResponse(String query,
       {int page = 0}) async {
     Map<String, dynamic> searchResultsBySeriesResult = opdsManifest['data']
@@ -983,6 +1042,8 @@ class LibraryCardOpds1 extends LibraryCard {
     return response;
   }
 
+  /// Handles the request for the search results by series, returning a [Future]
+  /// object of type [Map<String, dynamic>]
   @override
   Future<Map<String, dynamic>> getSearchResultsBySeries(String query,
       {int? page}) async {

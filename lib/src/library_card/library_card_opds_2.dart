@@ -488,10 +488,13 @@ class LibraryCardOpds2 extends LibraryCard {
   // ***************************************************************
   // On Deck
   // ***************************************************************
+  /// Checks if the On Deck functionality is available for the server
   bool _getNextReadyToReadAvailable() {
     return _getEntry('On Deck').isNotEmpty;
   }
 
+  /// Creates a request to get the On Deck response from the server
+  /// [page] is an optional parameter that can be passed to get a specific page
   Future<http.Response> _getNextReadyToReadResponse({int page = 0}) async {
     Map<String, dynamic> entry = _getEntry('On Deck');
 
@@ -520,10 +523,13 @@ class LibraryCardOpds2 extends LibraryCard {
   // ***************************************************************
   // Latest Series
   // ***************************************************************
+  /// Checks if the Latest Series functionality is available for the server
   bool _getLatestSeriesAvailable() {
     return _getEntry('Latest Series').isNotEmpty;
   }
 
+  /// Creates a request to get the Latest Series response from the server
+  /// [page] is an optional parameter that can be passed to get a specific page
   Future<http.Response> _getLatestSeriesResponse({int page = 0}) async {
     Map<String, dynamic> entry = _getEntry('Latest Series');
 
@@ -552,10 +558,13 @@ class LibraryCardOpds2 extends LibraryCard {
   // ***************************************************************
   // Latest Books
   // ***************************************************************
+  /// Checks if the Latest Books functionality is available for the server
   bool _getLatestBooksAvailable() {
     return _getEntry('Latest Books').isNotEmpty;
   }
 
+  /// Creates a request to get the Latest Books response from the server
+  /// [page] is an optional parameter that can be passed to get a specific page
   Future<http.Response> _getLatestBooksResponse({int page = 0}) async {
     Map<String, dynamic> entry = _getEntry('Latest Books');
 
@@ -599,10 +608,13 @@ class LibraryCardOpds2 extends LibraryCard {
   // ***************************************************************
   // Libraries
   // ***************************************************************
+  /// Checks if the Libraries functionality is available for the server
   bool _getLibrariesAvailable() {
     return _getEntry('Libraries').isNotEmpty;
   }
 
+  /// Creates a request to get the Libraries response from the server
+  /// [page] is an optional parameter that can be passed to get a specific page
   Future<http.Response> _getLibrariesResponse({int page = 0}) async {
     Map<String, dynamic> entry = _getEntry('Libraries');
 
@@ -633,10 +645,13 @@ class LibraryCardOpds2 extends LibraryCard {
   // ***************************************************************
   // Collections
   // ***************************************************************
+  /// Checks if the Collections functionality is available for the server
   bool _getCollectionsAvailable() {
     return _getEntry('Collections').isNotEmpty;
   }
 
+  /// Creates a request to get the Collections response from the server
+  /// [page] is an optional parameter that can be passed to get a specific page
   Future<http.Response> _getCollectionsResponse({int page = 0}) async {
     Map<String, dynamic> entry = _getEntry('Collections');
 
@@ -686,10 +701,13 @@ class LibraryCardOpds2 extends LibraryCard {
   // ***************************************************************
   // Read Lists
   // ***************************************************************
+  /// Checks if the Read Lists functionality is available for the server
   bool _getReadListsAvailable() {
     return _getEntry('Read lists').isNotEmpty;
   }
 
+  /// Creates a request to get the Read Lists response from the server
+  /// [page] is an optional parameter that can be passed to get a specific page
   Future<http.Response> _getReadListsResponse({int page = 0}) async {
     Map<String, dynamic> entry = _getEntry('Read lists');
 
@@ -720,11 +738,14 @@ class LibraryCardOpds2 extends LibraryCard {
   // ***************************************************************
   // Search Results by Series
   // ***************************************************************
-
+  /// Checks if the Search Results by Series functionality is available for the server
   bool _getSearchAvailable() {
     return _getEntry('Search').isNotEmpty;
   }
 
+  /// Creates a request to get the Search Results by Series response from the server
+  /// [page] is an optional parameter that can be passed to get a specific page
+  /// [query] is a required parameter that is the search string to search for
   Future<http.Response> _getSearchResponse(String query, {int page = 0}) async {
     Map<String, dynamic> entry = _getEntry('Search');
 
