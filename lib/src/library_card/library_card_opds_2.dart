@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-import 'package:opds_robo_librarian/src/library_card/Library_Card.dart';
+import 'package:opds_robo_librarian/src/library_card/library_card.dart';
 //import 'package:opds_robo_librarian/src/book/book.dart';
 
 class LibraryCardOpds2 extends LibraryCard {

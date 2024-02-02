@@ -1,4 +1,4 @@
-import 'package:opds_robo_librarian/src/library_card/Library_Card.dart';
+import 'package:opds_robo_librarian/src/library_card/library_card.dart';
 import 'package:xml/xml.dart';
 import 'package:http/http.dart' as http;
 
