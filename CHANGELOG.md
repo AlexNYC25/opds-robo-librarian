@@ -9,3 +9,7 @@
 - Added additional documentation to Library card functions
 - Added additional validate server function to Librarian to replace function in Library card
 - Added additional info to pupspec file
+
+## 0.1.2
+
+- Fixed library card classes import statements
